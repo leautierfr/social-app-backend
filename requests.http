@@ -1,0 +1,64 @@
+@jwt1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODI3MDc5MTl9.PXw7Ul-lnoU44hqXjjgpjxRCnIqcwR1Ij_0JEWnQNE8
+
+### User create 
+
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "username": "mindy",
+  "email": "mindy@example.com"
+}
+
+### Users index 
+
+GET http://localhost:3000/users.json 
+
+### Users show 
+
+GET http://localhost:3000/users/1.json
+
+### Users update 
+PATCH http://localhost:3000/users/2.json
+Content-Type: application/json
+
+{
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+
+### Users remove 
+
+DELETE http://localhost:3000/users/1.json
+
+
+### Post create 
+
+POST http://localhost:3000/posts.json
+Content-Type: application/json
+
+{
+  "body": "Hello this is Mindy",
+  "user_id": 2
+  
+
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json 
+Content-Type: application/json 
+
+{
+  "email": "billy@example.com",
+  "password": "password"
+}
+
+### Follows create
+POST http://localhost:3000/follows.json 
+Content-Type: application/json
+
+{
+  "followed_id": 2,
+  "user_id": 1
+}
